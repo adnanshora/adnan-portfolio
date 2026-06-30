@@ -371,11 +371,7 @@
     </div>
     <p class="section-desc">A dedicated gallery for wedding coverage — full ceremonies, candid in-betweens, and quiet portraits.</p>
   </div>
-  <div class="wed-wrap">
-    <div class="ring">&amp;</div>
-    <h3>Gallery <em>in progress</em></h3>
-    <p>This section is reserved for wedding coverage. Drop the ceremony, candid, and portrait sets in and they'll appear here in the same cinematic frame style as the rest of the site.</p>
-  </div>
+  <div class="grid" id="wedding-grid"></div>
 </section>
 
 <!-- CTA -->
@@ -513,6 +509,13 @@ function buildGrid(containerId, items, prefix){
 }
 buildGrid('content-grid', contentImgs, 'Content');
 buildGrid('photo-grid', photoImgs, 'Photography');
+
+// Wedding Images
+const weddingImgs = [
+{file:"wedding-001.jpg",o:"port"},
+{file:"wedding-002.jpg",o:"port"}
+];
+buildGrid('wedding-grid', weddingImgs, 'Nikah');
 
 // ---- Nav scroll state ----
 const nav = document.getElementById('nav');
